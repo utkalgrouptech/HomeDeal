@@ -160,7 +160,7 @@ export default function JobDetailPage({ params }: PageProps) {
             {/* Hero Banner */}
             <header className="breadcrumb-hero relative h-96 flex items-center justify-center overflow-hidden">
                 <img 
-                    src="/images/career-banner.jpg" 
+                    src="/images/img-9.jpg" 
                     alt={`${job.title} - HomeDeal Careers`}
                     className="bc-img absolute inset-0 w-full h-full object-cover"
                 />
