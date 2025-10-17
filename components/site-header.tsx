@@ -76,8 +76,50 @@ export default function Header() {
               >
                 Home
               </Link>
+                            <Link 
+                href="/about" 
+                className="text-lg hover:text-blue-400 transition-colors"
+                onClick={closeAllMenus}
+              >
+                About Us
+              </Link>
 
-              {/* Residential Services */}
+              {/* Projects */}
+              <div className="group">
+                <button 
+                  className="flex justify-between items-center w-full text-lg hover:text-blue-400 transition-colors"
+                  onClick={() => toggleSubmenu('projects')}
+                  aria-expanded={openSubmenu === 'projects'}
+                >
+                  <span>Projects</span>
+                  <i className={`bi bi-chevron-right transition-transform duration-300 ${
+                    openSubmenu === 'projects' ? 'rotate-90' : ''
+                  }`}></i>
+                </button>
+                <div className={`ml-4 mt-2 flex flex-col gap-2 transition-all duration-300 overflow-hidden ${
+                  openSubmenu === 'projects' 
+                    ? 'opacity-100 max-h-96' 
+                    : 'opacity-0 max-h-0'
+                }`}>
+                  <Link 
+                    href="/projects/previous" 
+                    className="text-sm hover:text-blue-400 transition-colors"
+                    onClick={closeAllMenus}
+                  >
+                    Previous Projects
+                  </Link>
+                  <Link 
+                    href="/projects/ongoing" 
+                    className="text-sm hover:text-blue-400 transition-colors"
+                    onClick={closeAllMenus}
+                  >
+                    Ongoing Projects
+                  </Link>
+                </div>
+              </div>
+
+
+                            {/* Residential Services */}
               <div className="group">
                 <button 
                   className="flex justify-between items-center w-full text-lg hover:text-blue-400 transition-colors"
@@ -186,48 +228,6 @@ export default function Header() {
                   </Link>
                 </div>
               </div>
-
-              {/* Projects */}
-              <div className="group">
-                <button 
-                  className="flex justify-between items-center w-full text-lg hover:text-blue-400 transition-colors"
-                  onClick={() => toggleSubmenu('projects')}
-                  aria-expanded={openSubmenu === 'projects'}
-                >
-                  <span>Projects</span>
-                  <i className={`bi bi-chevron-right transition-transform duration-300 ${
-                    openSubmenu === 'projects' ? 'rotate-90' : ''
-                  }`}></i>
-                </button>
-                <div className={`ml-4 mt-2 flex flex-col gap-2 transition-all duration-300 overflow-hidden ${
-                  openSubmenu === 'projects' 
-                    ? 'opacity-100 max-h-96' 
-                    : 'opacity-0 max-h-0'
-                }`}>
-                  <Link 
-                    href="/projects/previous" 
-                    className="text-sm hover:text-blue-400 transition-colors"
-                    onClick={closeAllMenus}
-                  >
-                    Previous Projects
-                  </Link>
-                  <Link 
-                    href="/projects/ongoing" 
-                    className="text-sm hover:text-blue-400 transition-colors"
-                    onClick={closeAllMenus}
-                  >
-                    Ongoing Projects
-                  </Link>
-                </div>
-              </div>
-
-              <Link 
-                href="/about" 
-                className="text-lg hover:text-blue-400 transition-colors"
-                onClick={closeAllMenus}
-              >
-                About Us
-              </Link>
               <Link 
                 href="/blogs" 
                 className="text-lg hover:text-blue-400 transition-colors"
