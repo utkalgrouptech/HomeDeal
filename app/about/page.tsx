@@ -1,5 +1,6 @@
 // pages/about.tsx or components/AboutPage.tsx
 "use client";
+import { CalendarCheck2, MessageCircle } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -143,11 +144,11 @@ export default function AboutPage() {
       {/* Sticky CTAs */}
       <div className="sticky-ctas hidden md:flex flex-col fixed right-6 bottom-6 gap-3 z-40">
         <a href="#contact" className="cta-btn bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg flex items-center gap-2 transition-colors">
-          <i className="bi bi-calendar2-check"></i>
+          <CalendarCheck2 className="w-5 h-5" />
           <span className="hidden">Book Consultation</span>
         </a>
-        <a href="https://wa.me/919668848999?text=Hi%20I%27m%20interested%20in%20HomeDeal" target="_blank" rel="noopener" className="cta-btn bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center gap-2 transition-colors">
-          <i className="bi bi-whatsapp"></i>
+        <a href="https://wa.me/9198XXXXXXXX?text=Hi%20I%27m%20interested%20in%20HomeDeal" target="_blank" rel="noopener" className="cta-btn bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center gap-2 transition-colors">
+          <MessageCircle className="w-5 h-5" />
           <span className="hidden">WhatsApp</span>
         </a>
       </div>
@@ -155,11 +156,11 @@ export default function AboutPage() {
       {/* Mobile bottom CTA bar */}
       <div className="mobile-cta-bar md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex z-40">
         <a href="#contact" className="flex-1 py-3 text-center text-blue-600 hover:bg-blue-50 transition-colors flex flex-col items-center gap-1">
-          <i className="bi bi-calendar2-check"></i>
+          <CalendarCheck2 className="w-5 h-5" />
           <span className="text-xs">Book Consultation</span>
         </a>
         <a href="https://wa.me/919668848999?text=Hi%20I%27m%20interested%20in%20HomeDeal" target="_blank" rel="noopener" className="flex-1 py-3 text-center text-green-600 hover:bg-green-50 transition-colors flex flex-col items-center gap-1">
-          <i className="bi bi-whatsapp"></i>
+          <MessageCircle className="w-5 h-5" />
           <span className="text-xs">WhatsApp</span>
         </a>
       </div>

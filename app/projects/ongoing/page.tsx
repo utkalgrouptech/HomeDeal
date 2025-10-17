@@ -1,5 +1,6 @@
 // pages/ongoing-projects.tsx
 "use client";
+import { CalendarCheck2, MessageCircle } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -140,12 +141,12 @@ export default function OngoingProjectsPage() {
 
       {/* Sticky CTAs */}
       <div className="sticky-ctas hidden md:flex flex-col fixed right-6 bottom-6 gap-3 z-40">
-        <a href="/contact" className="cta-btn bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg flex items-center gap-2 transition-colors">
-          <i className="bi bi-calendar2-check"></i>
-          <span className="hidden">Book Site Visit</span>
+        <a href="#contact" className="cta-btn bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg flex items-center gap-2 transition-colors">
+          <CalendarCheck2 className="w-5 h-5" />
+          <span className="hidden">Book Consultation</span>
         </a>
-        <a href="https://wa.me/919668848999?text=Hi%20I%27m%20interested%20in%20HomeDeal%20projects" target="_blank" rel="noopener" className="cta-btn bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center gap-2 transition-colors">
-          <i className="bi bi-whatsapp"></i>
+        <a href="https://wa.me/9198XXXXXXXX?text=Hi%20I%27m%20interested%20in%20HomeDeal" target="_blank" rel="noopener" className="cta-btn bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center gap-2 transition-colors">
+          <MessageCircle className="w-5 h-5" />
           <span className="hidden">WhatsApp</span>
         </a>
       </div>
