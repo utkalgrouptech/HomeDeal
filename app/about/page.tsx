@@ -43,9 +43,10 @@ export default function AboutPage() {
               <h5 className="text-xl mb-4 text-gray-700">
                 Built on Expertise. Driven by Innovation. Inspired by Nature.
               </h5>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                HomeDeal is a fresh new platform in real estate, built on over a decade of expertise to help you buy, sell, lease, or rent residential and commercial properties across Eastern India. We bring a new beginning to property discovery—with transparent, tech-driven solutions that move beyond heavy brokerage and endless site visits. Whether it's your dream home, a prime plot, or commercial office space, our experienced team makes the process seamless. With 10+ years in the industry and a renewed vision, our mission is simple: to be your most trusted real estate partner in Bhubaneswar for property investment, leasing, and financing.
-              </p>
+<p className="text-gray-600 mb-6 leading-relaxed text-justify">
+  HomeDeal is a new-age real estate platform built on over a decade of industry expertise. We help you buy, sell, lease, or rent residential and commercial properties across Eastern India. Our approach brings a fresh beginning to property discovery—transparent, tech-driven, and designed to move beyond heavy brokerage and endless site visits. Whether it’s your dream home, a premium plot, or a modern commercial space, our experienced team makes every step seamless. With 10+ years of experience and a renewed vision, our mission is simple: to be Bhubaneswar’s most trusted partner in property investment, leasing, and financing.
+</p>
+
             </div>
 
             {/* Image Column */}
@@ -81,12 +82,12 @@ export default function AboutPage() {
             {/* Mission Column */}
             <div className="w-full lg:w-1/2 order-1 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Vision</h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed text-justify">
                 Our vision is to create value beyond transactions and shape the future of how our clients Work, Live & Play; with our years of dedication and experience combined with deep market knowledge.
               </p>
               
               <h2 className="text-3xl md:text-4xl font-bold mb-4 mt-8">Mission</h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed text-justify">
                 Our mission is to impress existing and potential clients through unflinching customer service with the intent that all who come into contact with us are pleased and proud to recommend us to their professional network, business partners, families, their friends and their colleagues without hesitation.
               </p>
             </div>

@@ -8,14 +8,14 @@ export default function OngoingProjectsPage() {
     {
       name: 'EVOS ALCHEMY',
       image: '/images/EVOS-ALCHEMY.jpg',
-      href: '/evos-alchemy',
+      slug: 'evos-alchemy',
       location: 'Bhubaneswar',
       status: 'Ongoing'
     },
     {
       name: 'Kalinga Villa',
       image: '/images/kalinga-villa.jpg',
-      href: '/kalinga-villa',
+      slug: 'kalinga-villa',
       location: 'Bhubaneswar',
       status: 'Ongoing'
     },
@@ -76,10 +76,10 @@ export default function OngoingProjectsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {ongoingProjects.map((project, index) => (
               <Link 
-                key={project.name} 
-                href={project.href}
+                key={project.slug} 
+                href={`/projects/${project.slug}`}
                 className="project-card group block bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
-                aria-label={`View ${project.name} project`}
+                aria-label={`View ${project.slug} project`}
               >
                 <figure className="project-figure relative overflow-hidden">
                   <img 

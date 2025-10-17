@@ -13,7 +13,9 @@ import {
   Store,
   Package,
   Heart,
-  Zap
+  Zap,
+  MessageCircle,
+  CalendarCheck2
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -84,7 +86,7 @@ export default function HomePage() {
                 Homedeal is a fresh new platform in real estate, professionals with over a decade of expertise 
                 to help you buy, sell, lease, or rent residential and commercial properties across Eastern India...
               </p>
-              <Link href="/about-us" className="btn-brand bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg inline-block transition-colors">
+              <Link href="/about" className="btn-brand bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg inline-block transition-colors">
                 Know More
               </Link>
             </div>
@@ -264,29 +266,57 @@ export default function HomePage() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: 'EVOS ALCHEMY', image: '/images/EVOS-ALCHEMY.jpg', href: '/evos-alchemy' },
-              { name: 'Diamond City', image: '/images/Diamond-city.jpg', href: '/diamond-city' },
-              { name: 'Grand Awas', image: '/images/Grand-Awas.jpg', href: '/grand-awas' },
-              { name: 'Kalinga Villa', image: '/images/kalinga-villa.jpg', href: '/kalinga-villa' },
-              { name: 'One World', image: '/images/one-world.jpg', href: '/one-world' },
-              { name: 'Nawah 9 Boulevard', image: '/images/NAWAH-BOULEVARD.jpg', href: '/nawah-boulevard' }
-            ].map((project) => (
-              <Link key={project.name} href={project.href} className="project-card group">
-                <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-shadow">
-                  <img 
-                    src={project.image} 
-                    alt={project.name}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4">
-                    <span className="project-name font-semibold">{project.name}</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {[
+    { 
+      name: 'EVOS ALCHEMY', 
+      image: '/images/EVOS-ALCHEMY.jpg', 
+      slug: 'evos-alchemy' 
+    },
+    { 
+      name: 'Diamond City', 
+      image: '/images/Diamond-City.jpg', 
+      slug: 'diamond-city' 
+    },
+    { 
+      name: 'Grand Awas', 
+      image: '/images/Grand-Awas.jpg', 
+      slug: 'grand-awas' 
+    },
+    { 
+      name: 'Kalinga Villa', 
+      image: '/images/kalinga-villa.jpg', 
+      slug: 'kalinga-villa' 
+    },
+    { 
+      name: 'One World', 
+      image: '/images/one-world.jpg', 
+      slug: 'one-world' 
+    },
+    { 
+      name: 'Nawah 9 Boulevard', 
+      image: '/images/NAWAH-BOULEVARD.jpg', 
+      slug: 'nawah-9-boulevard' 
+    }
+  ].map((project) => (
+    <Link 
+      key={project.slug} 
+      href={`/projects/${project.slug}`}
+      className="project-card group"
+    >
+      <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-shadow">
+        <img 
+          src={project.image} 
+          alt={project.name}
+          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+        <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4">
+          <span className="project-name font-semibold">{project.name}</span>
+        </div>
+      </div>
+    </Link>
+  ))}
+</div>
 
           <div className="text-center mt-8">
             <Link href="/ongoing-projects" className="btn-blog-more border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg inline-block transition-colors">
@@ -320,7 +350,7 @@ export default function HomePage() {
               </header>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                {[1, 2, 3, 4].map((num) => (
                   <div key={num} className="partner-card bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center">
                     <img 
                       src={`/images/partner${num}.png`} 
@@ -450,11 +480,11 @@ export default function HomePage() {
       {/* Sticky CTAs */}
       <div className="sticky-ctas hidden md:flex flex-col fixed right-6 bottom-6 gap-3 z-40">
         <a href="#contact" className="cta-btn bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg flex items-center gap-2 transition-colors">
-          <i className="bi bi-calendar2-check"></i>
+          <CalendarCheck2 className="w-5 h-5" />
           <span className="hidden">Book Consultation</span>
         </a>
         <a href="https://wa.me/9198XXXXXXXX?text=Hi%20I%27m%20interested%20in%20HomeDeal" target="_blank" rel="noopener" className="cta-btn bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center gap-2 transition-colors">
-          <i className="bi bi-whatsapp"></i>
+          <MessageCircle className="w-5 h-5" />
           <span className="hidden">WhatsApp</span>
         </a>
       </div>

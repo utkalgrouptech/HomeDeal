@@ -68,7 +68,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <img src="/logo2.png" alt="HomeDeal" className="h-8" />
+            <img src="/images/logo3.png" alt="HomeDeal" className="h-8" />
             <span className="text-gray-400">Built on Intelligence. Driven by Execution.</span>
           </div>
 

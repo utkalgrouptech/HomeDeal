@@ -21,8 +21,8 @@ export default function Header() {
       {/* Top Bar */}
       <div className="topbar fixed top-0 left-0 right-0 z-50 py-3 px-4 flex justify-between items-center main-container">
         {/* Logo */}
-        <Link href="/" className="brand bg-white p-2 rounded-lg shadow-md">
-          <img src="/logo2.png" alt="HomeDeal Logo" className="h-8" />
+        <Link href="/" className="brand">
+          <img src="/images/logo3.png" alt="HomeDeal Logo" className="h-16" />
         </Link>
 
         {/* Right: CTA + Menu */}
